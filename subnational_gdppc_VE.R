@@ -320,13 +320,13 @@ venezuela_map <- ggplot() +
   ) +
   
   # 2. Add the Esequibo grid data layer (Guyana data for Esequibo)
-  geom_sf(
-    data = bfi_esequibo_sf,
-    aes(fill = gdp_decile),
-    # FIX: Change color from NA to a light gray
-    color = grid_border_color, 
-    size = 0.075
-  ) +
+  # geom_sf(
+  #   data = bfi_esequibo_sf,
+  #   aes(fill = gdp_decile),
+  #   # FIX: Change color from NA to a light gray
+  #   color = grid_border_color, 
+  #   size = 0.075
+  # ) +
   
   # 3. Add state borders (Venezuela only)
   geom_sf(
@@ -337,13 +337,13 @@ venezuela_map <- ggplot() +
   ) +
   
   # 4. Add the Esequibo claimed border (distinct visual style)
-  geom_sf(
-    data = esequibo_sf,
-    fill = NA, 
-    color = "red", 
-    linetype = "dashed", 
-    linewidth = 1
-  ) +
+  # geom_sf(
+  #   data = esequibo_sf,
+  #   fill = NA, 
+  #   color = "red", 
+  #   linetype = "dashed", 
+  #   linewidth = 1
+  # ) +
   
   # 5. Add country border for the outline
   geom_sf(
@@ -383,7 +383,7 @@ venezuela_map <- ggplot() +
 print(venezuela_map)
 
 # Save the map (optional)
-ggsave("venezuela_gdp_map.png", plot = venezuela_map, width = 8, height = 10, dpi = 300)
+ggsave("venezuela_gdp_map_2.png", plot = venezuela_map, width = 8, height = 10, dpi = 300)
 
 
 #### State and Municipal Levels ####
